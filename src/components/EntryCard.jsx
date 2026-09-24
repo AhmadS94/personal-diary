@@ -1,6 +1,7 @@
-function EntryCard({ entry }) {
+function EntryCard({ entry, onSelectEntry }) {
   return (
-    <article className="overflow-hidden rounded-xl bg-white shadow-md">
+    <article  onClick={() => onSelectEntry(entry)}
+  className="overflow-hidden rounded-xl bg-white shadow-md cursor-pointer">
       <img
         src={entry.image}
         alt={entry.title}
